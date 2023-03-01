@@ -5,21 +5,21 @@
 class Serve < Formula
   desc "Create a local server from any location on your computer (soon you will be able to expose it to the Internet as well ;))"
   homepage "https://github.com/planta7/serve"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/planta7/serve/releases/download/v0.1.2/serve_Darwin_x86_64.tar.gz"
-      sha256 "bf19faa6ce40f65ead122afdc00a13cbb81bbc001afe291b3a722d0ccc9db358"
+      url "https://github.com/planta7/serve/releases/download/v0.1.3/serve_Darwin_x86_64.tar.gz"
+      sha256 "c11aa03589466b663e10498e2c1c1c42d99a5ac9820dc4bc9df2adfde088bb05"
 
       def install
         bin.install "serve"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/planta7/serve/releases/download/v0.1.2/serve_Darwin_arm64.tar.gz"
-      sha256 "5cca2436ab298bc7340b5585c0bde497e96cfe265f0fb443f51f74e98322c2e6"
+      url "https://github.com/planta7/serve/releases/download/v0.1.3/serve_Darwin_arm64.tar.gz"
+      sha256 "d94fb5a5f908fbf936f445d6a38de25be1d208d120ac36a7a456370b543b7d96"
 
       def install
         bin.install "serve"
@@ -29,16 +29,16 @@ class Serve < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/planta7/serve/releases/download/v0.1.2/serve_Linux_arm64.tar.gz"
-      sha256 "2fa551aad3ff79950feb71cc2fe7ebc6e625b1c03ccc61fc442bde37322f39a5"
+      url "https://github.com/planta7/serve/releases/download/v0.1.3/serve_Linux_arm64.tar.gz"
+      sha256 "e9e5a4ee0ffce4f038e7df1f35c15b58ecf4eeea521a3ba8669ff9b79413108c"
 
       def install
         bin.install "serve"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/planta7/serve/releases/download/v0.1.2/serve_Linux_x86_64.tar.gz"
-      sha256 "a4e747fca2889e89bdf60c7f334096eda3d7a39480e2a1ece8680090943667eb"
+      url "https://github.com/planta7/serve/releases/download/v0.1.3/serve_Linux_x86_64.tar.gz"
+      sha256 "bda21f59e3527ed7cef4da0d2177907144d9dd653c60e252a1d29cc9d4910135"
 
       def install
         bin.install "serve"
