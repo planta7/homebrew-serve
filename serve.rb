@@ -9,17 +9,17 @@ class Serve < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/planta7/serve/releases/download/v0.1.4/serve_Darwin_x86_64.tar.gz"
-      sha256 "5631bf3c81fd80a96433ba2bfcc33382a3d3c47fac63afeb5212bd59bd1ac327"
+    if Hardware::CPU.arm?
+      url "https://github.com/planta7/serve/releases/download/v0.1.4/serve_Darwin_arm64.tar.gz"
+      sha256 "3e65e8fa187cb00e0117a7004fce37773bfb0a9258dda08e8bb1571733f82dfe"
 
       def install
         bin.install "serve"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/planta7/serve/releases/download/v0.1.4/serve_Darwin_arm64.tar.gz"
-      sha256 "ff570de443c23253698126bf6858573b6c8147f112d2d5f193db42d858a96363"
+    if Hardware::CPU.intel?
+      url "https://github.com/planta7/serve/releases/download/v0.1.4/serve_Darwin_x86_64.tar.gz"
+      sha256 "486285eefe555bd7cb8da4d6d662496b09bfd7ecab5251ad1ada0ae46e0e1724"
 
       def install
         bin.install "serve"
@@ -28,17 +28,17 @@ class Serve < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/planta7/serve/releases/download/v0.1.4/serve_Linux_x86_64.tar.gz"
-      sha256 "3e9e869d8ab791ca16b07cf02a5aa6d40fa789be963d015ecf72b779bb0ba1a6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/planta7/serve/releases/download/v0.1.4/serve_Linux_arm64.tar.gz"
+      sha256 "0ab60f679c1de25bd41beb118210fedeb50b53dd4ceec9f54685bd5f38ad8177"
 
       def install
         bin.install "serve"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/planta7/serve/releases/download/v0.1.4/serve_Linux_arm64.tar.gz"
-      sha256 "fa8a0c576c5e33efd1e866783946d14051cb387746aeef52ddb148add25b0ab4"
+    if Hardware::CPU.intel?
+      url "https://github.com/planta7/serve/releases/download/v0.1.4/serve_Linux_x86_64.tar.gz"
+      sha256 "5252213611b9b716a8a478d503b624d6463bfbccc91924b0699e5dfc43e1404d"
 
       def install
         bin.install "serve"
