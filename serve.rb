@@ -5,44 +5,62 @@
 class Serve < Formula
   desc "Create a local server from any location on your computer (soon you will be able to expose it to the Internet as well ;))"
   homepage "https://github.com/planta7/serve"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/planta7/serve/releases/download/v0.1.4/serve_Darwin_arm64.tar.gz"
-      sha256 "d9c0b8ec6b93b5006ce25fbfaef77048b84b560aa21e88ffb7c70be8c1ca1771"
+      url "https://github.com/planta7/serve/releases/download/v0.1.5/serve_Darwin_arm64.tar.gz"
+      sha256 "65fdc2d1ab4352fab0ea896f5280711afcc38534b2e63827682cf7f40afc141c"
 
       def install
         bin.install "serve"
+        bash_completion.install "completions/serve.bash" => "serve"
+        zsh_completion.install "completions/serve.zsh" => "_serve"
+        fish_completion.install "completions/serve.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/planta7/serve/releases/download/v0.1.4/serve_Darwin_x86_64.tar.gz"
-      sha256 "aaa347e9875a38edf5c569b85d3ef2ada10dbf75d9f36a13edf915c42805d745"
+      url "https://github.com/planta7/serve/releases/download/v0.1.5/serve_Darwin_x86_64.tar.gz"
+      sha256 "5b5d97d5ab4372974f683290c2e8c3e419619fd81a9bd7bc94b1acec02158343"
 
       def install
         bin.install "serve"
+        bash_completion.install "completions/serve.bash" => "serve"
+        zsh_completion.install "completions/serve.zsh" => "_serve"
+        fish_completion.install "completions/serve.fish"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/planta7/serve/releases/download/v0.1.4/serve_Linux_arm64.tar.gz"
-      sha256 "30c5605a6e8c0f43105f2a55df48ce1563fa7dabc636718838ea3329cca455cd"
-
-      def install
-        bin.install "serve"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/planta7/serve/releases/download/v0.1.4/serve_Linux_x86_64.tar.gz"
-      sha256 "a014608f2627363792e66720240cac44ed57055be23804df08aa2d0db22fa594"
+      url "https://github.com/planta7/serve/releases/download/v0.1.5/serve_Linux_x86_64.tar.gz"
+      sha256 "422d6a579bfce99b6a950e228b70bf2cd83aafbf248267bd855ca22ee6794e68"
 
       def install
         bin.install "serve"
+        bash_completion.install "completions/serve.bash" => "serve"
+        zsh_completion.install "completions/serve.zsh" => "_serve"
+        fish_completion.install "completions/serve.fish"
       end
     end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/planta7/serve/releases/download/v0.1.5/serve_Linux_arm64.tar.gz"
+      sha256 "39b3a2bb22f2a1ca9e5fffcc5f5b7c2745ae7e8be9f580f5dafdbb1ff1a3fb54"
+
+      def install
+        bin.install "serve"
+        bash_completion.install "completions/serve.bash" => "serve"
+        zsh_completion.install "completions/serve.zsh" => "_serve"
+        fish_completion.install "completions/serve.fish"
+      end
+    end
+  end
+
+  def caveats
+    <<~EOS
+      Thanks for installing serve!
+    EOS
   end
 end
