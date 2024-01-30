@@ -5,13 +5,13 @@
 class Serve < Formula
   desc "Create a local server from any location on your computer (soon you will be able to expose it to the Internet as well ;))"
   homepage "https://github.com/planta7/serve"
-  version "0.2.3"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/planta7/serve/releases/download/v0.2.3/serve_Darwin_arm64.tar.gz"
-      sha256 "4a0d14ca72ac5feb80eddca5a2637f22ce6b5d58d5850633bd4ef83a6df7a5b5"
+      url "https://github.com/planta7/serve/releases/download/v0.3.0/serve_Darwin_arm64.tar.gz"
+      sha256 "d171301f79b723f90ac9bbaf1adcc5749100b507d8ed724580cfb3f21ed4a378"
 
       def install
         bin.install "serve"
@@ -21,8 +21,8 @@ class Serve < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/planta7/serve/releases/download/v0.2.3/serve_Darwin_x86_64.tar.gz"
-      sha256 "78c22fae15b90daa24c2ad8b46186ed710b69e2b720c39a1f4e87d907a570f24"
+      url "https://github.com/planta7/serve/releases/download/v0.3.0/serve_Darwin_x86_64.tar.gz"
+      sha256 "f9c158f3272daca6e6046f062e6db90e3ad6a81c0477bf36f1fb35c555ff8e62"
 
       def install
         bin.install "serve"
@@ -34,9 +34,9 @@ class Serve < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/planta7/serve/releases/download/v0.2.3/serve_Linux_arm64.tar.gz"
-      sha256 "76b7bc3359b3f84c5c2c946d556f1a8b22045b802221a3249e60fd574aeea593"
+    if Hardware::CPU.intel?
+      url "https://github.com/planta7/serve/releases/download/v0.3.0/serve_Linux_x86_64.tar.gz"
+      sha256 "82aa4b9a4da652a6eaf9131435342ce64a7385ae058d75e00d2c401d1ec9164f"
 
       def install
         bin.install "serve"
@@ -45,9 +45,9 @@ class Serve < Formula
         fish_completion.install "completions/serve.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/planta7/serve/releases/download/v0.2.3/serve_Linux_x86_64.tar.gz"
-      sha256 "8bfa3c41874b7e536c9a8484c0ef9752d884ca6f6ebc6e0c256c7a4fe7785e7d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/planta7/serve/releases/download/v0.3.0/serve_Linux_arm64.tar.gz"
+      sha256 "6d1d5275a5b4eff95446381eb291099c99bd92a795cfdcd00c76adbc3af7ee83"
 
       def install
         bin.install "serve"
