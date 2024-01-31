@@ -5,13 +5,13 @@
 class Serve < Formula
   desc "Create a local server from any location on your computer (soon you will be able to expose it to the Internet as well ;))"
   homepage "https://github.com/planta7/serve"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/planta7/serve/releases/download/v0.3.0/serve_Darwin_arm64.tar.gz"
-      sha256 "d171301f79b723f90ac9bbaf1adcc5749100b507d8ed724580cfb3f21ed4a378"
+      url "https://github.com/planta7/serve/releases/download/v0.3.1/serve_Darwin_arm64.tar.gz"
+      sha256 "bdda583532ad10538820b9e079db62ee2cba8ebd7ab077b240226eeb13a5dd17"
 
       def install
         bin.install "serve"
@@ -21,8 +21,8 @@ class Serve < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/planta7/serve/releases/download/v0.3.0/serve_Darwin_x86_64.tar.gz"
-      sha256 "f9c158f3272daca6e6046f062e6db90e3ad6a81c0477bf36f1fb35c555ff8e62"
+      url "https://github.com/planta7/serve/releases/download/v0.3.1/serve_Darwin_x86_64.tar.gz"
+      sha256 "7a176b7b285c62c88f2b75e5e82f667a84b723c4ee2087802e3d6fed13aa62c3"
 
       def install
         bin.install "serve"
@@ -35,8 +35,8 @@ class Serve < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/planta7/serve/releases/download/v0.3.0/serve_Linux_x86_64.tar.gz"
-      sha256 "82aa4b9a4da652a6eaf9131435342ce64a7385ae058d75e00d2c401d1ec9164f"
+      url "https://github.com/planta7/serve/releases/download/v0.3.1/serve_Linux_x86_64.tar.gz"
+      sha256 "14b565c9e61e770846ec22e0fe31820b7261421da144838dc9b3cc710fd930e9"
 
       def install
         bin.install "serve"
@@ -46,8 +46,8 @@ class Serve < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/planta7/serve/releases/download/v0.3.0/serve_Linux_arm64.tar.gz"
-      sha256 "6d1d5275a5b4eff95446381eb291099c99bd92a795cfdcd00c76adbc3af7ee83"
+      url "https://github.com/planta7/serve/releases/download/v0.3.1/serve_Linux_arm64.tar.gz"
+      sha256 "c4120144c69a1243230e4fc68768ba92499a876931621c01b15b6bde17ee1263"
 
       def install
         bin.install "serve"
