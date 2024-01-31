@@ -11,7 +11,7 @@ class Serve < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/planta7/serve/releases/download/v0.3.1/serve_Darwin_arm64.tar.gz"
-      sha256 "bdda583532ad10538820b9e079db62ee2cba8ebd7ab077b240226eeb13a5dd17"
+      sha256 "f39915f7af98b0dab382718db8bda410987fcc4f7c82af60234d0342803e2bc4"
 
       def install
         bin.install "serve"
@@ -22,7 +22,7 @@ class Serve < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/planta7/serve/releases/download/v0.3.1/serve_Darwin_x86_64.tar.gz"
-      sha256 "7a176b7b285c62c88f2b75e5e82f667a84b723c4ee2087802e3d6fed13aa62c3"
+      sha256 "597f00dcc87f5bb8e11aa8e779069a19827f0aa7968bcfc8b9bdd4cddc5fa00b"
 
       def install
         bin.install "serve"
@@ -36,7 +36,7 @@ class Serve < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/planta7/serve/releases/download/v0.3.1/serve_Linux_x86_64.tar.gz"
-      sha256 "14b565c9e61e770846ec22e0fe31820b7261421da144838dc9b3cc710fd930e9"
+      sha256 "c74ffb87c5c21c3ca5c7903a3b958a151158954dfc359829f8bb93016fdf1a82"
 
       def install
         bin.install "serve"
@@ -47,7 +47,7 @@ class Serve < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/planta7/serve/releases/download/v0.3.1/serve_Linux_arm64.tar.gz"
-      sha256 "c4120144c69a1243230e4fc68768ba92499a876931621c01b15b6bde17ee1263"
+      sha256 "2e919787ee7b58b220ae36222471389885c78fe8e198a1d3d50471d7dc9ea6dd"
 
       def install
         bin.install "serve"
