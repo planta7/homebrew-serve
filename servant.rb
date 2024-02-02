@@ -5,13 +5,13 @@
 class Servant < Formula
   desc "Create a local server from any location on your computer (soon you will be able to expose it to the Internet as well ;))"
   homepage "https://github.com/planta7/servant"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/planta7/servant/releases/download/v0.4.0/servant_Darwin_arm64.tar.gz"
-      sha256 "3f4471c9d93f0192c82acba806dcb91e27533de7ff8a8554c1e66901ce6b816d"
+      url "https://github.com/planta7/servant/releases/download/v0.4.1/servant_Darwin_arm64.tar.gz"
+      sha256 "cac651ba2ab7758c06b7d254cfead6f1b407c6fbda9ec0e281b7f392384a7d71"
 
       def install
         bin.install "servant"
@@ -21,8 +21,8 @@ class Servant < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/planta7/servant/releases/download/v0.4.0/servant_Darwin_x86_64.tar.gz"
-      sha256 "11676933e5eaf85e3a9e181fd6524070411850e2c542b1b5ea8569dcd1066524"
+      url "https://github.com/planta7/servant/releases/download/v0.4.1/servant_Darwin_x86_64.tar.gz"
+      sha256 "58d4db398bfb041f873e488e38b0563d72c35b8d9ecb6d7ade978ad0dc6c2906"
 
       def install
         bin.install "servant"
@@ -35,8 +35,8 @@ class Servant < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/planta7/servant/releases/download/v0.4.0/servant_Linux_arm64.tar.gz"
-      sha256 "338d4be4751b05aadd297d5e45ce565493a67a9e94cb674b2ec2f9e84863c74c"
+      url "https://github.com/planta7/servant/releases/download/v0.4.1/servant_Linux_arm64.tar.gz"
+      sha256 "d37a1c6a1381970dd355d51a1f7d4e317591dafb85e5b48f60babac9812cd6fb"
 
       def install
         bin.install "servant"
@@ -46,8 +46,8 @@ class Servant < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/planta7/servant/releases/download/v0.4.0/servant_Linux_x86_64.tar.gz"
-      sha256 "bd0bb4d1e8b43fa9e24db045b39846213263dd9ea1a515086e06f1dced7d6eed"
+      url "https://github.com/planta7/servant/releases/download/v0.4.1/servant_Linux_x86_64.tar.gz"
+      sha256 "b6243dc7a81e1b3a6d5c5cd899c60226b25dac6cf1dd6553973f716c7ccd8e30"
 
       def install
         bin.install "servant"
