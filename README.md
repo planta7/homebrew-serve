@@ -1,10 +1,10 @@
 # homebrew-tap
-Official [Homebrew](https://brew.sh/) formulae for `serve`
+Official [Homebrew](https://brew.sh/) formulae for `servant`
 
 ## Installation
 
 ```sh
-brew install planta7/tap/serve
+brew install planta7/tap/servant
 ```
 
 ## Documentation
@@ -13,4 +13,4 @@ brew install planta7/tap/serve
 
 ## Issues
 
-For non-installation issues, please go to https://github.com/planta7/serve/issues
+For non-installation issues, please go to https://github.com/planta7/servant/issues
